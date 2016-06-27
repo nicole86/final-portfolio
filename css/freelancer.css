@@ -180,7 +180,16 @@ header .intro-text .skills {
 .navbar-inverse {
     border: 0;
 }
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus {
+    background-color: #e196b2;
+}
 
+.navbar-default .navbar-nav>li>a:hover, 
+.navbar-default .navbar-nav>li>a:focus {
+    color: #e196b2;
+}
 section {
     padding: 100px 0;
 }
