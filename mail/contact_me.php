@@ -1,4 +1,6 @@
 <?php
+error_reporting(-1);
+
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
