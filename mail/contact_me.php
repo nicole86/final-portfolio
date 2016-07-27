@@ -7,8 +7,6 @@ $email_address = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
-echo '$name - $email_address \n';
-
 $email = new SendGrid\Email();
 $email->addTo('brower.nicole86@gmail.com')
     ->setFrom($email_address)
