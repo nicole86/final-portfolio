@@ -17,7 +17,7 @@ $email->addTo('brower.nicole86@gmail.com')
       'You have received a new message from your website contact form.<br>
       Here are the details:<br><br>
       Name: ' . $name . '<br><br>
-      Email: ' . $email . '<br><br>
+      Email: ' . $email_address . '<br><br>
       Phone: ' . $phone . '<br><br>
       Message:<br>' . $message
 );
