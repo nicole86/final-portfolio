@@ -11,7 +11,7 @@ echo '$name - $email_address \n';
 
 $email = new SendGrid\Email();
 $email->addTo('brower.nicole86@gmail.com')
-    ->setFrom($email)
+    ->setFrom($email_address)
     ->setSubject('Website Contact Form: ' + $name)
     ->setHtml(
       'You have received a new message from your website contact form.<br>
