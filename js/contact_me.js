@@ -48,7 +48,7 @@ $(function() {
 
 
             $.ajax({
-                url: "mail/contact_me.php",
+                url: "mail/contact.php",
                 type: "POST",
                 data: {
                     name: name,
