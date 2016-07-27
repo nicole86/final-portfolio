@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 $sendgrid = new SendGrid('app52809917@heroku.com', 'Michelle86');
 
 $name = $_POST['name'];
