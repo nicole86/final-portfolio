@@ -1,6 +1,6 @@
 <?php
 require '../vendor/autoload.php';
-$sendgrid = new SendGrid('app52809917@heroku.com', 'Michelle86');
+$sendgrid = new SendGrid(getenv('SENDGRID_USERNAME'), getenv('SENDGRID_PASSWORD'));
 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
