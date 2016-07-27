@@ -11,12 +11,18 @@ echo '$name - $email_address \n';
 
 $email = new SendGrid\Email();
 $email->addTo('brower.nicole86@gmail.com')
-    ->setFrom('$email')
-    ->setSubject('Website Contact Form: $name')
-    ->setText($_POST['message'])
-    ->setHtml('You have received a new message from your website contact form.\n\n.Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message');
+    ->setFrom($email)
+    ->setSubject('Website Contact Form: ' + $name)
+    ->setHtml(
+      'You have received a new message from your website contact form.<br>
+      Here are the details:<br><br>
+      Name: ' . $name . '<br><br>
+      Email: ' . $email . '<br><br>
+      Phone: ' . $phone . '<br><br>
+      Message:<br>' . $message
+);
 
-echo $sendgrid->send($email);
+$sendgrid->send($email);
 return true;
 // error_reporting(-1);
 //
