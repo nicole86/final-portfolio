@@ -7,6 +7,8 @@ $email_address = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
+echo '$name - $email_address \n';
+
 $email = new SendGrid\Email();
 $email->addTo('brower.nicole86@gmail.com')
     ->setFrom('$email')
@@ -14,7 +16,7 @@ $email->addTo('brower.nicole86@gmail.com')
     ->setText($_POST['message'])
     ->setHtml('You have received a new message from your website contact form.\n\n.Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message');
 
-$sendgrid->send($email);
+echo $sendgrid->send($email);
 return true;
 // error_reporting(-1);
 //
